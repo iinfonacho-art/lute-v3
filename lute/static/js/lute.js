@@ -240,7 +240,7 @@ function show_multiword_term_edit_form(selected) {
   if (selected.length == 0)
     return;
   const textparts = selected.toArray().map((el) => $(el).text());
-  const text = textparts.join('').trim();
+  const text = textparts.join('\u200B').trim();
   if (text == "")
     return;
   const lid = parseInt(selected.eq(0).data('lang-id'));
